@@ -1,0 +1,27 @@
+{% extends 'index.html' %}
+{% block content %}
+{%load staticfiles%}
+
+<h1>Unidades academicas</h1>
+
+<div class="container">
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Unidad académica</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for ua in listaUnidades %}
+            <tr>
+                <td width="5%">10</td>
+                <td width="95%"><a href="{{ua.url}}">{{ua.nombre}}</a></td>
+            </tr>
+            {%endfor%}
+
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}
